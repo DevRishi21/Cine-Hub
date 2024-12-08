@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('https://c4.wallpaperflare.com/wallpaper/443/241/271/art-collage-digital-fan-wallpaper-preview.jpg') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    color: #ffffff; /* White text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: -1; /* Push the overlay behind content */
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #f0e10b;
+    font-size: 2.5rem;
+    font-family: cursive;
+    background-color: #444;
+}
+
+h2 {
+    color: #444;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Section Styles */
+section {
+    background-color: #ffffff; /* White background for sections */
+    margin: 20px auto;
+    max-width: 500px;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+section:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Input and Button Styles */
+input {
+    margin: 5px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007BFF; /* Blue outline on focus */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF; /* Primary button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Link Styles */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Message Styles */
+#movieLink, #adminMessage {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #28a745; /* Success green for messages */
+    font-weight: bold;
+}
+
+#error {
+    color: #dc3545; /* Error red */
+    font-weight: bold;
+}
+
+/* Password Section Styles */
+#passwordSection {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+#passwordSection input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+#passwordSection button {
+    margin-top: 10px;
+}
+
+/* Threshold Section Styles */
+#thresholdSection {
+    margin-top: 20px;
+    text-align: center;
+}
+#thresholdSection button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#thresholdSection button:hover {
+    background-color: #0056b3;
+}
+#dbSize {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+#errorThreshold {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: red;
+}
+
+/* Available Movies Section Styles */
+#availableMoviesSection {
+    margin-top: 20px;
+    text-align: center;
+}
+#availableMoviesSection button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+#availableMoviesSection button:hover {
+    background-color: #0056b3;
+}
+#moviesList {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+#moviesList li {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+    background-color: whitesmoke;
+}
+

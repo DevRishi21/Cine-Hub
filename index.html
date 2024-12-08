@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>C for Cinema</h1>
+
+    <!-- Initial Choice -->
+    <div id="choice">
+        <button onclick="showModule('user')">User</button>
+        <button onclick="showPasswordSection()">Admin</button>
+    </div>
+
+    <!-- Password Section for Admin -->
+    <section id="passwordSection" style="display: none;">
+        <h2>Admin Login</h2>
+        <input type="password" id="adminPassword" placeholder="Enter Admin Password">
+        <button onclick="validatePassword()">Submit</button>
+        <button onclick="goBack()">Cancel</button>
+        <div id="passwordError" style="color: red; margin-top: 10px;"></div>
+    </section>
+
+    <!-- User Module -->
+    <section id="userModule" style="display: none;">
+        <h2>User - Search for a Movie</h2>
+        <input type="text" id="searchMovie" placeholder="Enter movie name">
+        <button onclick="fetchMovie()">Search</button>
+        <div id="movieLink"></div>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <!-- Admin Module -->
+    <section id="adminModule" style="display: none;">
+        <h2>Admin</h2>
+        <input type="text" id="movieName" placeholder="Enter movie name">
+        <input type="text" id="movieLinkInput" placeholder="Enter movie link">
+        <button onclick="addMovie()">Add Movie</button>
+        <div id="adminMessage"></div>
+        <button onclick="goBack()">Go Back</button>
+    </section>
+
+    <!-- Available Movies Button and Display Area -->
+    <div id="availableMoviesSection">
+        <button onclick="fetchAvailableMovies()">Available Movies</button>
+        <ul id="moviesList"></ul>  <!-- List of available movies will be displayed here -->
+    </div>
+
+
+    <!-- Add Threshold Button and Display Area -->
+    <div id="thresholdSection">
+        <button onclick="checkThreshold()">Check Threshold</button>
+        <div id="dbSize"></div>
+        <div id="errorThreshold"></div>  <!-- Error message will be displayed here -->
+    </div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
